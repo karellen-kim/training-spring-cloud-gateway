@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: default_path
+          uri: ${test.uri}
+          order: 10000
+          predicates:
+            - Path=/**
